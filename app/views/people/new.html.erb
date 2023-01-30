@@ -1,0 +1,17 @@
+<h1>New person</h1>
+
+<%= form_with model: @people do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name%>
+  </div>
+
+  <div>
+    <%= form.label :surname %><br>
+    <%= form.text_field :surname %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
