@@ -1,6 +1,6 @@
 <h1>People#index</h1>
 <ul>
   <% @people.each do |person| %>
-    <li><%= person.name %> <%= person.surname %></li>
+    <li><%= person.name %> <%= person.surname %> <%= link_to 'INFO', person_path(person) %></li>
   <% end %>
 </ul>
