@@ -13,7 +13,7 @@ class PeopleController < ApplicationController
 
   def create
     @person = Person.new(person_params)
-    if @person.save 
+    if @person.save
       redirect_to @person
     else
       render :new, status: :unprocessable_entity
