@@ -30,7 +30,7 @@ class PeopleController < ApplicationController
     @person = Person.find(params[:id])
 
     if @person.update(person_params)
-      redirect_to :person
+      redirect_to @person
     else
       render :edit, status: :unprocessable_entity
     end
