@@ -20,6 +20,10 @@ class PeopleController < ApplicationController
     end
   end
 
+  def edit
+    @person = Person.find(params[:id])
+  end
+
   private
 
   def person_params
