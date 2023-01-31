@@ -2,4 +2,4 @@
 
 <p>Name: <%= @person.name %></p>
 <p>Surname: <%= @person.surname %></p>
-<p><%= link_to 'Back', people_path %></p>
+<p><%= link_to 'Back', people_path %> |  <%= link_to 'Edit', edit_person_path(@person) %></p>
