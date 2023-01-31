@@ -2,4 +2,10 @@
 
 <p>Name: <%= @person.name %></p>
 <p>Surname: <%= @person.surname %></p>
-<p><%= link_to 'Back', people_path %> |  <%= link_to 'Edit', edit_person_path(@person) %></p>
+<p>
+  <%= link_to 'Back', people_path %>
+  <%= link_to 'Edit', edit_person_path(@person) %>
+  <%= link_to 'Delete', person_path(@person), data: {
+    turbo_method: :delete,
+    turbo_confirm: "Are you sure?" } %>
+</p>

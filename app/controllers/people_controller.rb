@@ -42,7 +42,7 @@ class PeopleController < ApplicationController
 
     # "303 See Other" redirect status response code indicates that the redirects 
     # don't link to the requested resource itself, but to another page.
-    redirect_to root_path, status :see_other
+    redirect_to root_path, status: :see_other
   end
 
   private
