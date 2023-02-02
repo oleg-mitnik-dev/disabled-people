@@ -1,7 +1,9 @@
 <h1>Person file (#show)</h1>
+<hr>
 
 <p>Name: <%= @person.given_names %></p>
 <p>Surname: <%= @person.surname %></p>
+
 <p>
   <%= link_to 'Back', people_path %>
   <%= link_to 'Edit', edit_person_path(@person) %>
@@ -9,3 +11,17 @@
     turbo_method: :delete,
     turbo_confirm: "Are you sure?" } %>
 </p>
+<br>
+
+<h2>Add a guardian</h2>
+<%# "build" = alias for "new" %>
+<%# "books.build(attributes = {})" method returns a single array of new objects of the associated type. %>
+<%= form_with model: [ @person, @person.guardians.build ] do |form| %>
+<p>
+  <%= form.label :name %><br>
+  <%= form.text_field :name %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+<% end %>
