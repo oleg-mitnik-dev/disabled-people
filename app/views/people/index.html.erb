@@ -4,6 +4,6 @@
 
 <ul>
   <% @people.each do |person| %>
-    <li><%= person.name %> <%= person.surname %> <%= link_to 'INFO', person_path(person) %></li>
+    <li><%= person.given_names %> <%= person.surname %> <%= link_to 'INFO', person_path(person) %></li>
   <% end %>
 </ul>

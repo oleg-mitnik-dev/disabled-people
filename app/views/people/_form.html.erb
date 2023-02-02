@@ -1,8 +1,8 @@
 <%= form_with model: person do |form| %>
   <p>
-    <%= form.label :name %><br>
-    <%= form.text_field :name%>
-      <% person.errors.full_messages_for(:name).each do |message| %>
+    <%= form.label :given_names %><br>
+    <%= form.text_field :given_names %>
+      <% person.errors.full_messages_for(:given_names).each do |message| %>
         <div><%= message if message.present? %></div>
     <% end %>
   </p>
