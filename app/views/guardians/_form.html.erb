@@ -1,0 +1,11 @@
+<%# "build" = alias for "new" %>
+<%# "books.build(attributes = {})" method returns a single array of new objects of the associated type. %>
+<%= form_with model: [ @person, @person.guardians.build ] do |form| %>
+<p>
+  <%= form.label :name %><br>
+  <%= form.text_field :name %>
+</p>
+<p>
+  <%= form.submit %>
+</p>
+<% end %>
