@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_02_054234) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_02_060553) do
   create_table "appointments", id: false, force: :cascade do |t|
     t.integer "person_id", null: false
     t.integer "guardian_id", null: false
@@ -20,6 +20,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_02_054234) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "guardians_people", id: false, force: :cascade do |t|
+    t.integer "person_id", null: false
+    t.integer "guardian_id", null: false
   end
 
   create_table "people", force: :cascade do |t|
