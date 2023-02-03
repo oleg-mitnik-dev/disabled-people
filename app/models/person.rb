@@ -4,4 +4,12 @@ class Person < ApplicationRecord
 
   validates :given_names, presence: true, length: { minimum: 3 }
   validates :surname, presence: true, length: {minimum: 5 }
+  
+  VALID_STATUSES = ['public', 'private', 'archived']
+  
+  validates :status, inclusion: { in: VALID_STATUSES }
+  
+  def archived?
+    status == 'archived'
+  end
 end
