@@ -9,7 +9,7 @@ class GuardiansController < ApplicationController
 
   def guardian_params
     #<ActionController::Parameters {... ,"guardian"=>{"name"=>"Guardian Name"}, ...}
-    params.require(:guardian).permit(:name)
+    params.require(:guardian).permit(:name, :status)
   end
 
 end
