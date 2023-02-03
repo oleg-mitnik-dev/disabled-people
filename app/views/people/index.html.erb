@@ -4,6 +4,11 @@
 
 <ul>
   <% @people.each do |person| %>
-    <li><%= person.given_names %> <%= person.surname %> <%= link_to 'INFO', person_path(person) %></li>
+    <% unless person.archived? %>
+      <li>
+        <%= person.given_names %> <%= person.surname %>&nbsp
+        <%= link_to 'INFO', person_path(person) %>
+      </li>
+    <% end %> 
   <% end %>
 </ul>

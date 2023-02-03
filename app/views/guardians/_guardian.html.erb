@@ -1,4 +1,6 @@
-<p>
-  <strong>Name:</strong>
-  <%= guardian.name %>
-</p>
+<% unless guardian.archived? %>
+  <p> 
+    <strong>Name:</strong>
+    <%= guardian.name %>
+  </p>
+<% end %>
