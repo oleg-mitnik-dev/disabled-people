@@ -3,8 +3,8 @@ module Visible
 
   VALID_STATUSES = ['public', 'private', 'archived']
 
-  <%# The code inside the included block is evaluated in the context %>
-  <%# of the including class.  %>
+  # The code inside the included block is evaluated in the context
+  # of the including class.
   included  do
     validates :status, inclusion: { in: VALID_STATUSES }
   end
