@@ -3,4 +3,11 @@
     <strong>Name:</strong>
     <%= guardian.name %>
   </p>
+  
+  <p>
+    <%= link_to "Delete Guardian", [@person, guardian], data: { 
+      turbo_method: :delete,
+      turbo_confirm: "Are you sure?" 
+      } %>
+  </p>
 <% end %>

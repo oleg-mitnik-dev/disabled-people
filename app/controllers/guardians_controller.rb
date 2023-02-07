@@ -4,6 +4,13 @@ class GuardiansController < ApplicationController
     @guardian = @person.guardians.create(guardian_params)
     redirect_to person_path(@person)
   end
+  
+  def destroy
+    @person = Person.find(params[:person_id])
+    @guardian = @person.guardians.find(params[:id])
+    @guardian.destroy
+    redirect_to person_path(@person), status: :see_other
+  end
 
   private
 
