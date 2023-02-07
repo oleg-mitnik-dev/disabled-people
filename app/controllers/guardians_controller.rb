@@ -1,4 +1,6 @@
 class GuardiansController < ApplicationController
+  http_basic_authenticate_with name: "jora", password: "123458352", only: :destroy
+
   def create
     @person = Person.find(params[:person_id])
     @guardian = @person.guardians.create(guardian_params)
