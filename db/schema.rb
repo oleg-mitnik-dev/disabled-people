@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_03_084345) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_07_124717) do
   create_table "appointments", id: false, force: :cascade do |t|
     t.integer "person_id", null: false
     t.integer "guardian_id", null: false
+  end
+
+  create_table "assets", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.string "management"
+    t.string "responsible"
+    t.date "date_of_appointment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "guardians", force: :cascade do |t|
